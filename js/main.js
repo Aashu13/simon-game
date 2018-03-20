@@ -44,6 +44,7 @@ $(document).ready(function () {
             alert("this is wrong");
             counter = 0;
             squence = [];
+            window.location.reload(1);
           }
         }
       }
