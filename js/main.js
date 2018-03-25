@@ -8,16 +8,13 @@ $(document).ready(function () {
     var counter = 0;
     var count_2 = 0;
     var count = document.getElementsByClassName("count");
-    //console.log(count);
 
 
     function nextSquence() {
 
       var audios = [red_audio, blue_audio, green_audio, yellow_audio];
       var randomNumber = audios[Math.floor(Math.random() * audios.length)];
-      randomNumber.play();
       squence.push(randomNumber);
-      // buttons.style.
       console.log("the new buttons random is  :" + randomNumber);
     }
 
