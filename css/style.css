@@ -2,122 +2,169 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #759495;
 }
 
 h1 {
-  color: #722872;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 50px;
-  text-shadow: 0px 3px 5px #ddd;
+  font-family: arial;
 }
 
-.wrapper {
-  width: 80%;
-  margin: auto;
+.simon-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  top: 100px;
 }
 
 .container {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
+  position: relative;
 }
 
-.btn_container {
-  width: 80%;
-  padding: 60px 10px;
-  margin: auto;
-  text-align: center;
+.btn-container {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
 }
 
-button {
-  width: 160px;
-  height: 160px;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.green,
+.red,
+.yellow,
+.blue {
+  margin: 0;
+  float: left;
+  width: 240px;
+  height: 240px;
+  border: 5px solid #000;
 }
 
-#red_btn {
-  background: red;
-}
-
-#green_btn {
+.green {
   background: green;
+  border-radius: 300px 0 0 0;
 }
 
-#blue_btn {
-  background: blue;
+.green-active {
+  background: #325828 !important;
 }
 
-#yellow_btn {
+.red {
+  background: red;
+  border-radius: 0 300px 0 0;
+}
+
+.red-active {
+  background: #821212 !important;
+}
+
+.yellow {
   background: yellow;
+  border-radius: 0 0 0 300px;
+}
+
+.yellow-active {
+  background: #9aa027 !important;
+}
+
+.blue {
+  background: blue;
+  border-radius: 0 0 300px 0;
+}
+
+.blue-active {
+  background: #093575 !important;
 }
 
 .controlers {
-  width: 100%;
-  padding: 20px;
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 120px;
   text-align: center;
 }
 
-.time_counterDiv {
-  width: 10%;
-  display: inline-block;
+.game-title {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 30px;
 }
 
-.start_div {
-  width: 10%;
-  display: inline-block;
+.start-div {
+  width: 70%;
+  line-height: 2px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
 }
 
-.toggle_btn {
-  width: 20%;
-  display: inline-block;
+.start-div .counter {
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 20px;
+  background: #574847;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
 }
 
-.start_div,
-.toggle_btn,
-.time_counterDiv {
-  padding: 20px;
-}
-
-.toggle_btn input[type="checkbox"] {
-  width: 58px;
+.start-div .start_btn {
+  width: 30px;
   height: 30px;
-  -webkit-appearance: none;
-  background: #ddd;
-  border-radius: 30px;
-  transition: 0.5s;
-  outline: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: red;
+}
+
+.start-div .strict-btn {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+}
+
+.start-div .strict-btn,
+.start_btn {
   position: relative;
   top: 10px;
-}
-
-.toggle_btn input:checked[type="checkbox"] {
-  background: skyblue;
-  transition: 0.1s;
-}
-
-.toggle_btn input[type="checkbox"]:before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  left: 4px;
-  bottom: 5.4px;
-  border: 2px solid #ddd;
-  background: #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-size: border-box;
-  transition: 0.1s;
 }
 
-.toggle_btn input:checked[type="checkbox"]:before {
-  left: 30px;
-  transition: 0.1s;
+.game-on-div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  font-family: arial;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  background: #f2f2f2;
+  position: relative;
+  top: 15px;
+}
+
+.toggle:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: skyblue;
+}
+
+.active .toggle {
+  background: red;
 }

@@ -9,42 +9,45 @@
 </head>
 
 <body>
+    <h1>Simon Game</h1>
 
-    <div class="wrapper">
+    <div class="simon-wrapper">
         <div class="container">
-            <h1>Simon Game</h1>
 
-            <div class="btn_container">
-                <div>
-                    <button id="red_btn"></button>
-                    <button id="blue_btn"></button>
-                </div>
-                <div>
-                    <button id="green_btn"></button>
-                    <button id="yellow_btn"></button>
+            <div class="btn-container">
+                <div class="randomBtn green" id="1" data-target="green-btn"></div>
+                <div class="randomBtn red" id="2" data-target="red-btn"></div>
+                <div class="randomBtn yellow" id="3" data-target="yellow-btn"></div>
+                <div class="randomBtn blue" id="4" data-target="blue-btn"></div>
+                <div class="controlers">
+                    <h3 class="game-title">simon</h3>
+                    <div class="start-div">
+                        <div class="counter"></div>
+                        <div class="start_btn" id="start">
+                        </div>
+                        <div class="strict-btn"></div>
+                    </div>
+                    <div class="game-on-div">
+                        <h3>Off</h3>
+                        <div class="toggle"></div>
+                        <h3>On</h3>
+                    </div>
                 </div>
             </div>
-            <div class="controlers">
-                <div class="time_counterDiv">
-                    <span class="count">0</span>
-                    <span>count</span>
-                </div>
 
 
-                <div class="start_div">
-                    <span>Start</span>
-                </div>
-
-                <div class="toggle_btn div">
-                    <label>On/Off</label>
-                    <input type="checkBox" id="start_game">
-                </div>
-            </div>
         </div>
+
+
+    </div>
     </div>
 
-
-
+    <div class="audio">
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-target="green-btn"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-target="red-btn"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-target="yellow-btn"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-target="blue-btn"></audio>
+    </div>
 
 
     <script src="js/jquery-3.3.1.min.js"></script>
